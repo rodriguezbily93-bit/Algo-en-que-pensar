@@ -1,0 +1,9 @@
+{
+  "appId": "com.sevaletodo.app",
+  "appName": "Se vale todo",
+  "webDir": "public",
+  "server": {
+    "url": "https://TU-LINK-DE-RENDER.onrender.com",
+    "cleartext": false
+  }
+}

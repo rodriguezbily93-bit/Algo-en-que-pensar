@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Se vale todo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Se vale todo</h1>
+        <p>Video chat aleatorio en tiempo real</p>
+      </div>
+      <div class="stats">
+        <span id="onlineCount">0</span> usuarios online
+      </div>
+    </header>
+
+    <main class="video-grid">
+      <section class="video-card remote">
+        <video id="remoteVideo" autoplay playsinline></video>
+        <div id="status" class="status">Presiona “Buscar” para iniciar</div>
+      </section>
+
+      <section class="video-card local">
+        <video id="localVideo" autoplay muted playsinline></video>
+      </section>
+    </main>
+
+    <section class="controls">
+      <button id="findBtn">Buscar</button>
+      <button id="nextBtn">Next</button>
+      <button id="muteBtn">Mute</button>
+      <button id="cameraBtn">Cámara</button>
+      <button id="reportBtn" class="danger">Reportar</button>
+    </section>
+
+    <section class="filters">
+      <label>Filtro de cámara:</label>
+      <select id="filterSelect">
+        <option value="none">Normal</option>
+        <option value="grayscale(1)">Blanco y negro</option>
+        <option value="sepia(1)">Sepia</option>
+        <option value="contrast(1.6)">Contraste</option>
+        <option value="saturate(1.8)">Color vivo</option>
+        <option value="blur(2px)">Blur</option>
+      </select>
+    </section>
+
+    <section class="chat">
+      <div id="chatBox"></div>
+      <div class="chat-input">
+        <input id="chatInput" placeholder="Escribe un mensaje..." maxlength="300" />
+        <button id="sendBtn">Enviar</button>
+      </div>
+    </section>
+
+    <footer>
+      <a href="admin.html">Panel admin</a>
+    </footer>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
