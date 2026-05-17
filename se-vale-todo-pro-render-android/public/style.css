@@ -271,3 +271,119 @@ footer {
     height: 45px;
   }
 }
+/* FORZAR DISEÑO MÓVIL MITAD Y MITAD */
+@media (max-width: 899px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .app {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    height: 45px;
+    flex-shrink: 0;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .stats {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .video-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    width: 100% !important;
+    height: 62vh !important;
+    gap: 6px !important;
+    margin-top: 6px !important;
+    position: relative !important;
+  }
+
+  .video-card,
+  .remote,
+  .local {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    background: #000 !important;
+  }
+
+  .remote {
+    grid-row: 1 !important;
+  }
+
+  .local {
+    grid-row: 2 !important;
+    border: 1px solid #334155 !important;
+  }
+
+  video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .controls {
+    flex-shrink: 0;
+    margin-top: 6px !important;
+    gap: 5px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .controls button {
+    padding: 8px 9px !important;
+    font-size: 12px !important;
+  }
+
+  .filters {
+    flex-shrink: 0;
+    margin-top: 5px !important;
+    font-size: 12px !important;
+  }
+
+  .chat {
+    flex-shrink: 0;
+    height: 95px !important;
+    margin-top: 6px !important;
+    padding: 6px !important;
+  }
+
+  #chatBox {
+    height: 38px !important;
+    font-size: 12px !important;
+  }
+
+  .chat-input input {
+    font-size: 12px !important;
+    padding: 8px !important;
+  }
+
+  .chat-input button {
+    font-size: 12px !important;
+    padding: 8px !important;
+  }
+}
