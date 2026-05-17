@@ -119,7 +119,20 @@ function sendMessage() {
   addMessage(message, true);
   chatInput.value = "";
 }
+const welcomeScreen = document.getElementById("welcomeScreen");
+const startAppBtn = document.getElementById("startAppBtn");
 
+if (startAppBtn) {
+  startAppBtn.onclick = async () => {
+    welcomeScreen.style.display = "none";
+
+    try {
+      await startCamera();
+    } catch (e) {
+      console.error(e);
+    }
+  };
+}
 reportBtn.onclick = async () => {
   if (!partnerId) return alert("No hay usuario conectado para reportar.");
 
@@ -194,4 +207,3 @@ socket.on("partner-left", () => {
   setStatus("El usuario salió. Presiona Next o Buscar.");
 });
 
-startCamera();
