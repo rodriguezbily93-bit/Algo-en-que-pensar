@@ -162,3 +162,51 @@ button {
 footer {
   display: none;
 }
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom, #020617, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(15,23,42,.95);
+  border: 1px solid #334155;
+  border-radius: 28px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0,0,0,.5);
+}
+
+.welcome-card h2 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.welcome-card p {
+  color: #cbd5e1;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+#welcomeScreen button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 18px;
+  font-size: 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#welcomeScreen button:hover {
+  opacity: .92;
+}
